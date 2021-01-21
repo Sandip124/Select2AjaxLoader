@@ -1,5 +1,3 @@
-export {Select2AjaxLoader as default};
-
 function Select2AjaxLoader(parent,child,url,failErrorMessage,showAllOption = false)
 {
     let className = [...Array(30)].map(() => Math.random().toString(36)[2]).join('');
