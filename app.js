@@ -6,10 +6,10 @@ function Select2AjaxLoader(parent,child,url,failErrorMessage,valueMember,display
     $(loadingIcon).css({
         'display':'none',
         'width': '15px',
-        'position': 'absolute',
+        'position': 'relative',
         'height': '15px',
-        'left': 'calc(100% - 4.2em)',
-        'top': '2.5em',
+        'left': 'calc(100% - 3em)',
+        'top': '1.8em',
         'z-index': '999999999',
         'border': '2px solid rgb(0 0 0 / 40%)',
         'border-radius': '50%',
