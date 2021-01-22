@@ -1,5 +1,7 @@
 ## Select2 Ajax Loader
 
+Simple Helper method to  load data in  select2 drop down with custom loader.
+
 HTML
 ```HTML
 <script src="https://cdn.jsdelivr.net/gh/Sandip124/Select2AjaxLoader/app.js" type="text/javascript"></script>
