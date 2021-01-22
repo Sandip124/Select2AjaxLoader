@@ -8,6 +8,7 @@ function Select2AjaxLoader(parent,child,url,failErrorMessage,valueMember,display
         'width': '15px',
         'position': 'relative',
         'height': '15px',
+        'margin-top': '-15px',
         'left': 'calc(100% - 3em)',
         'top': '1.8em',
         'z-index': '999999999',
