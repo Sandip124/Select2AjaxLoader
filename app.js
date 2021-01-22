@@ -1,4 +1,4 @@
-function Select2AjaxLoader(parent,child,url,failErrorMessage,showAllOption = false)
+function Select2AjaxLoader(parent,child,url,failErrorMessage,valueMember,displayMember,showAllOption = false)
 {
     let className = [...Array(30)].map(() => Math.random().toString(36)[2]).join('');
     $(child).before('<div class='+className+'></div>');
@@ -34,7 +34,9 @@ function Select2AjaxLoader(parent,child,url,failErrorMessage,showAllOption = fal
                     $(child).append('<option value="0">ALL</option>');
                 }
                 $.each(response.data, function (i, item) {
-                    $(child).append('<option value=' + item["Id"] + '>' + item["Name"] + '</option>');
+                    let valueHolder = valueMember || "Id";
+                    let displayHolder = displayMember || "Name";
+                    $(child).append(new Option(item[displayHolder],item[valueHolder],false,false));
                 });
                 $(child).change();
                 $(loadingIcon).css({'display':'none'});

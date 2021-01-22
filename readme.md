@@ -6,7 +6,7 @@ HTML
 ```
 Js
 ```Js
-Select2AjaxLoader($("#BranchId"),$("#userId"),"/api/users/branch/","Error while fetching user list");
+Select2AjaxLoader($("#BranchId"),$("#userId"),"/api/users/branch/","Error while fetching user list","Id","Name",false);
 ```
 
 |Parameter| Meaning  |
@@ -15,5 +15,7 @@ Select2AjaxLoader($("#BranchId"),$("#userId"),"/api/users/branch/","Error while 
 | [1] |Represent child element where the data is fetched and initialized  data.|
 | [2] | Fetch Url|
 | [3] | Error Message if failed |
-| [4] | Show All Option (Can be used in the  form while filtering data.) |
+| [4] | Value Member |
+| [5] | Display Member |
+| [6] | Show All Option (Can be used in the  form while filtering data.) |
 
