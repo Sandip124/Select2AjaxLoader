@@ -43,7 +43,7 @@ function Select2AjaxLoader(parent,child,url,failErrorMessage,valueMember,display
                 $(loadingIcon).css({'display':'none'});
             },
             error: function (e) {
-                notifyError(failErrorMessage || e.message);
+                alert(failErrorMessage || e.message);
                 $(loadingIcon).css({'display':'none'});
             }
 
@@ -95,7 +95,7 @@ function Select2AjaxLoader(element,url,failErrorMessage,valueMember,displayMembe
                 $(loadingIcon).css({'display':'none'});
             },
             error: function (e) {
-                notifyError(failErrorMessage || e.message);
+                alert(failErrorMessage || e.message);
                 $(loadingIcon).css({'display':'none'});
             }
 
