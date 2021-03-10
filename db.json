@@ -1,22 +1,24 @@
-[
-    {
-        "id": "1",
-        "name": "Ben Awwards"
-    },
-    {
-        "id": "2",
-        "name": "Albert Hertz"
-    },
-    {
-        "id": "3",
-        "name": "Heny Ford"
-    },
-    {
-        "id": "4",
-        "name": "Joshep Lucifer"
-    },
-    {
-        "id": "5",
-        "name": "Tara Dipson"
-    }
-]
+{
+    "data": [
+        {
+            "id": "1",
+            "name": "Ben Awwards"
+        },
+        {
+            "id": "2",
+            "name": "Albert Hertz"
+        },
+        {
+            "id": "3",
+            "name": "Heny Ford"
+        },
+        {
+            "id": "4",
+            "name": "Joshep Lucifer"
+        },
+        {
+            "id": "5",
+            "name": "Tara Dipson"
+        }
+    ]
+}
