@@ -19,37 +19,37 @@ function Select2AjaxLoader(parent,child,url,failErrorMessage,valueMember,display
         '-webkit-animation': 'spin .5s linear infinite'
     });
 
-    $(parent).on("change", function (e) {
-        $.ajax({
-            url: url + $(parent).val(),
-            dataType: 'json',
-            type: 'GET',
-            beforeSend: function ()
-            {
-                $(loadingIcon).css({'display':'block'});
-            },
-            success: function (response) {
-                $(child).empty();
-                if(showAllOption === true)
-                {
-                    $(child).append('<option value="0">ALL</option>');
-                }
-                $.each(response.data, function (i, item) {
-                    let valueHolder = valueMember || "Id";
-                    let displayHolder = displayMember || "Name";
-                    $(child).append(new Option(item[displayHolder],item[valueHolder],false,false));
-                });
-                $(child).change();
-                $(loadingIcon).css({'display':'none'});
-            },
-            error: function (e) {
-                alert(failErrorMessage || e.message);
-                $(loadingIcon).css({'display':'none'});
-            }
 
+  $(parent).on("change", function (e) {
+    $.ajax({
+      url: url + $(parent).val(),
+      dataType: "json",
+      type: "GET",
+      beforeSend: function () {
+        $(loadingIcon).css({ display: "block" });
+      },
+      success: function (response) {
+        $(child).empty();
+        if (showAllOption === true) {
+          $(child).append('<option value="0">ALL</option>');
+        }
+        $.each(response.data, function (i, item) {
+          let valueHolder = valueMember || "Id";
+          let displayHolder = displayMember || "Name";
+          $(child).append(
+            new Option(item[displayHolder], item[valueHolder], false, false)
+          );
         });
+        $(child).change();
+        $(loadingIcon).css({ display: "none" });
+      },
+      error: function (e) {
+        notifyError(failErrorMessage || e.message);
+        $(loadingIcon).css({ display: "none" });
+      },
     });
-    $(parent).change();
+  });
+  $(parent).change();
 }
 
 
