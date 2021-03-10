@@ -100,6 +100,5 @@ function Select2AjaxLoader(element,url,failErrorMessage,valueMember,displayMembe
             }
 
         });
-    });
 }
 
